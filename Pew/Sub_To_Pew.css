@@ -1,0 +1,75 @@
+body{
+    margin:0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(pew_design.jpg) no-repeat;
+    background-size: cover;
+}
+img{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 10%;
+    transition: 0.5s;
+    transform: rotateZ(25deg);
+}
+img:hover{
+    transform: rotateZ(0deg);
+    width: 150px;
+    height: 150px;
+}
+a{
+    position: relative;
+    width: 360px;
+    height: 160px;
+    transform-style: preserve-3d;
+    transform: perspective(500px) rotateY(25deg);
+    transition: 2s;
+
+}
+a:hover{
+    transform: perspective(500px) rotateY(317deg);
+}
+a div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    letter-spacing: 2px;
+    color: rgb(26, 26, 26);
+    text-transform: uppercase;
+    box-sizing: border-box;
+    background: rgb(249, 1, 63);
+
+}
+a div:nth-child(1){
+    transform: translateZ(50px);
+    border-left: 12px solid rgb(26, 26, 26);
+    border-right: 12px solid rgb(26, 26, 26);
+}
+a div:nth-child(4){
+    transform: translateZ(-50px);
+    border-left: 12px solid rgb(26, 26, 26);
+    border-right: 12px solid rgb(26, 26, 26);
+}
+a div:nth-child(2),
+a div:nth-child(3){
+    width: 100px;
+    height: 100%;
+    background: rgb(26, 26, 26);
+}
+a div:nth-child(2){
+    transform: rotateY(90deg) translateZ(310px);
+}
+a div:nth-child(3){
+    transform: rotateY(90deg) translateZ(-50px);
+}
